@@ -16,7 +16,7 @@ This research explores the effectiveness of deep learning models, particularly C
 
 ### Problem Statement
 - **Objective:** Predict stock price trend for the last hour of trading day
-- **Input:** OHLCV (Open, High, Low, Close, Volume) data from current and previous days
+- **Input:** Candlestick charts from current and previous days
 - **Output:** Binary classification (up/down trend)
 
 ---
@@ -42,7 +42,6 @@ This research explores the effectiveness of deep learning models, particularly C
 1. **LSTMs are worth the complexity** for sequential financial data
 2. **Chart augmentations matter** - Heiken Ashi + pattern highlighting beats vanilla candlesticks
 3. **5-minute resolution** hits the sweet spot for intraday patterns
-4. **8 days of history** provides optimal context window
 
 ---
 
