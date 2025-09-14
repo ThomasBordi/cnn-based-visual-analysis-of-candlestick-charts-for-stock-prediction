@@ -13,9 +13,8 @@ These results suggest that LSTMs are more effective than CNNs for capturing both
 
 
 ## Citation
-@misc{bordino2025candlestick,
-title={Deep Learning for Candlestick Chart Classification: Predicting Stock Price Movements Using Convolutional Neural Networks},
-author={Thomas Bordino},
-year={2025},
-institution={Columbia University}
-}
+
+**Title:** Deep Learning for Candlestick Chart Classification: Predicting Stock Price Movements Using Convolutional Neural Networks  
+**Author:** Thomas Bordino  
+**Year:** 2024  
+**Institution:** Columbia University
