@@ -1,20 +1,50 @@
-# Deep Learning for Candlestick Chart Classification  
-**Predicting Stock Price Movements Using Convolutional Neural Networks**
+# Deep Learning for Candlestick Chart Classification
 
-## Summary
-This work investigates the use of deep learning for predicting stock price movements from candlestick chart images. Both Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks were evaluated on minute-level OHLCV data across multiple time intervals (1-, 5-, and 15-minute) and chart types (traditional candlestick, Heiken Ashi, and pattern-enhanced with indicators such as bullish engulfing and Doji).
+## Predicting Stock Price Movements Using Convolutional Neural Networks
 
-Key findings include:
-- CNNs perform well for basic candlestick pattern recognition, particularly with 5-minute intervals.  
-- LSTM models outperform CNNs by capturing temporal dependencies in chart sequences.  
-- The best result, **63.9% validation accuracy**, was achieved with an LSTM model trained on 8-day sequences with augmented chart types.  
+**Author:** Thomas Bordino (Columbia University)
 
-These results suggest that LSTMs are more effective than CNNs for capturing both visual and temporal aspects of financial time-series data.
+### Abstract
 
+This research explores the effectiveness of deep learning models, particularly Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM) networks, for predicting stock price movements based on candlestick chart data. The study aims to predict the trend of the last hour of a trading day using OHLCV data from current and previous trading days.
 
-## Citation
+**Key Achievement:** Best validation accuracy of 63.9% with LSTM model using 8-day sequences.
 
-**Title:** Deep Learning for Candlestick Chart Classification: Predicting Stock Price Movements Using Convolutional Neural Networks  
-**Author:** Thomas Bordino  
-**Year:** 2024  
-**Institution:** Columbia University
+---
+
+## 📊 Research Overview
+
+### Problem Statement
+- **Objective:** Predict stock price trend for the last hour of trading day
+- **Input:** OHLCV (Open, High, Low, Close, Volume) data from current and previous days
+- **Output:** Binary classification (up/down trend)
+
+---
+
+## 🔑 Key Insights
+
+### What Works Best
+- **LSTM models beat CNNs** for time series prediction (63.9% vs ~56% accuracy)
+- **5-minute intervals** provide optimal balance between detail and noise
+- **Heiken Ashi charts** with pattern highlighting improve performance by ~4%
+- **8-day sequences** are the sweet spot for temporal modeling
+
+### Surprising Findings
+- Pre-trained ResNet performed poorly (53%) - financial charts differ too much from natural images
+- Multi-interval inputs didn't help - single 5-minute interval was sufficient
+- Attention mechanisms provided minimal benefit
+- Simple architectures often outperform complex ones for individual charts
+
+---
+
+## 💡 Practical Takeaways
+
+1. **LSTMs are worth the complexity** for sequential financial data
+2. **Chart augmentations matter** - Heiken Ashi + pattern highlighting beats vanilla candlesticks
+3. **5-minute resolution** hits the sweet spot for intraday patterns
+4. **8 days of history** provides optimal context window
+
+---
+
+## Dataset
+24 tickers, 2000-2024, 3+ million charts via Alpha Vantage API
